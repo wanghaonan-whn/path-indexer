@@ -1,4 +1,4 @@
-#include "PathParser.h"
+#include "../include/path_indexer/PathParser.h"
 #include <sstream>
 
 PathParser PathParser::byDelimiter(char delimiter, std::vector<std::string> field_names)
@@ -37,7 +37,7 @@ PathParser::Result PathParser::parseByDelimiter(const std::string& path) const
 
     if (tokens.size() != field_names_.size())
     {
-        return result; // 字段数不匹配，success保持false，不抛异常
+        return result;
     }
 
     for (size_t i = 0; i < field_names_.size(); ++i)
@@ -54,7 +54,7 @@ PathParser::Result PathParser::parseByRegex(const std::string& path) const
     std::smatch match;
     if (!std::regex_search(path, match, regex_) || match.size() - 1 != field_names_.size())
     {
-        return result; // 不匹配或捕获组数量不对，视为解析失败
+        return result;
     }
 
     for (size_t i = 0; i < field_names_.size(); ++i)
