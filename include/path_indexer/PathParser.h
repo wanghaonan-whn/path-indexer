@@ -2,8 +2,8 @@
 // Created by qzq on 2026/8/21.
 //
 
-#ifndef LEARN_PATHPARSER_H
-#define LEARN_PATHPARSER_H
+#ifndef PATH_INDEXER_PATHPARSER_H
+#define PATH_INDEXER_PATHPARSER_H
 
 #pragma once
 #include <string>
