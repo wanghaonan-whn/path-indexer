@@ -47,4 +47,4 @@ private:
     Result parseByRegex(const std::string& path) const;
 };
 
-#endif //LEARN_PATHPARSER_H
+#endif //PATH_INDEXER_PATHPARSER_H
